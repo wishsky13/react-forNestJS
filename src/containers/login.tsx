@@ -52,13 +52,13 @@ const LoginScreen = () => {
           });
           switch (res?.data.role[0]) {
             case 1:
-              navigate("/admin/dashboard");
+              navigate("/admin/dashboard", { replace: true });
               break;
             case 2:
-              navigate("/employee/dashboard");
+              navigate("/employee/dashboard", { replace: true });
               break;
             default:
-              navigate("/dashboard");
+              navigate("/dashboard", { replace: true });
               break;
           }
           break;

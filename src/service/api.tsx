@@ -42,10 +42,18 @@ export const ApiWithAuth = (token: string) =>
 
       getMember: (id: string) => api.get(`/members/${id}`),
 
+      editMemberRole: (
+        id: string,
+        body: {
+          role: string;
+        }
+      ) => api.put(`/members/${id}/role`, body),
+
       editMember: (
         id: string,
         body: {
-          role: number[];
+          username: string;
+          password: string;
         }
       ) => api.put(`/members/${id}`, body),
     };

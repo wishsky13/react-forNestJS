@@ -1,17 +1,162 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-div{
+div {
   box-sizing: border-box;
+}
+
+.MuiDataGrid-cell:focus,
+.MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-cell {
+  outline: 0 !important;
+}
+
+.MuiSelect-select {
+  padding: 8px 28px 8px 16px !important;
+  width: fit-content;
+  min-width: 72px;
+}
+
+.MuiOutlinedInput-root {
+  background: #fff !important;
+}
+
+.MuiButton-root,
+.MuiTableCell-root {
+  white-space: nowrap;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn-area {
+  justify-content: flex-end;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.MuiButton-outlined {
+  border: 1.5px solid !important;
+}
+
+.MuiButton-contained {
+  box-shadow: inset 0 0 !important;
+}
+
+.MuiPaper-root {
+  min-width: fit-content;
+}
+
+.MuiDialog-container p {
+  white-space: pre-line;
+  text-align: center;
+}
+
+.MuiSnackbar-root {
+  left: 166px !important;
+}
+
+.textfield-full {
+  width: 100%;
+  position: relative;
+}
+.textfield-xl {
+  min-width: 600px !important;
+}
+.textfield-l {
+  min-width: 326px !important;
+}
+.textfield-m {
+  min-width: 250px !important;
+}
+.textfield-s {
+  min-width: 150px !important;
+}
+.textfield-s-max {
+  max-width: 150px !important;
+}
+.textfield-m-max {
+  max-width: 250px !important;
+}
+.textfield-xl-max {
+  max-width: 600px !important;
+}
+.textfield-xl-max-with-button {
+  max-width: 670px !important;
+}
+
+.textfield-button {
+  position: absolute !important;
+  right: 0;
+}
+
+.button-md {
+  max-width: 97.6px;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+.table-wrap {
+  word-wrap: break-word !important;
+  white-space: inherit !important;
+}
+
+.table-wrap button {
+  word-wrap: break-word !important;
+  white-space: inherit !important;
+}
+
+.form-indent-remove {
+  margin-left: -28px;
+}
+
+.tag-content {
+  line-height: 1.7;
+}
+
+.Mui-disabled.MuiInputBase-root {
+  background: #f7f7f7 !important;
+}
+
+.MuiTableContainer-root {
+  max-height: 35vh;
+  overflow-y: scroll;
+}
+
+@media (max-width: 1024px) {
+  .textfield-xl {
+    min-width: inherit !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .textfield-l,
+  .textfield-m,
+  .textfield-s {
+    min-width: inherit !important;
+  }
+}
+
+.br {
+  line-height: 1.7;
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -40,6 +40,21 @@ const Header = (props: IHeader) => {
   const navigate = useNavigate();
   const { UserData } = useContext(UserContext);
 
+  const handleNavigation = () => {
+    if (UserData) {
+      switch (UserData["role"][0]) {
+        case 1:
+          navigate("/admin/dashboard");
+          break;
+        case 2:
+          navigate("/employee/dashboard");
+          break;
+        default:
+          navigate("/dashboard");
+      }
+    }
+  };
+
   return (
     <Stack
       component={Wrapper}
@@ -54,13 +69,7 @@ const Header = (props: IHeader) => {
         alignItems="center"
         spacing={1}
       >
-        <Title
-          onClick={() => {
-            navigate(`/portal/overview`);
-          }}
-        >
-          Meow
-        </Title>
+        <Title onClick={() => handleNavigation()}>Meow v1.0.0</Title>
       </Stack>
       <Stack
         direction="row"
@@ -76,8 +85,7 @@ const Header = (props: IHeader) => {
             >
               {props.name.slice(0, 1)}
             </Avatar>
-            <Name>{props.name}</Name>
-
+            <Link to={`/member/${props.id}`}><Name>{props.name}</Name></Link>
             <Button
               variant="contained"
               size="small"

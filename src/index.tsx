@@ -9,7 +9,7 @@ import {
   SignUp,
   Dashboard,
   AdminDashBoard,
-  AdminMember,
+  Member,
   EmployeeDashBoard,
 } from "./containers";
 import reportWebVitals from "./reportWebVitals";
@@ -47,6 +47,7 @@ root.render(
           <Routes>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/member/:id" element={<Member />}></Route>
 
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/admin/dashboard" element={<AdminDashBoard />}></Route>

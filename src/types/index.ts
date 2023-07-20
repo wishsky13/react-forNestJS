@@ -6,6 +6,7 @@ export interface IMe {
 
 export interface IMember {
   id: string;
+  account: string;
   username: string;
   role: number[];
   created_at: string;
@@ -16,4 +17,9 @@ export interface IPage {
   count: number;
   size: number;
   last: number;
+}
+
+export interface ISelectOption {
+  id: string;
+  label: string;
 }

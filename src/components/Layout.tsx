@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useContext, useEffect, useMemo } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Header, Progress } from "../components";
 import Container from "@mui/material/Container";
 import { UserContext } from "../provider/user";
 import { useLocation, useNavigate } from "react-router-dom";
+import { SnackbarProvider } from "notistack";
+import { Colors, Metrics } from "../themes";
 
 type ILayout = {
   className?: string;
@@ -21,7 +23,7 @@ const Wrapper = styled.div`
 const Content = styled.div`
   position: relative;
   top: 70px;
-  width: calc(100% - 150px);
+  width: 100%;
   padding: 16px;
   &.full {
     top: inherit;
@@ -44,7 +46,7 @@ const Layout = (props: ILayout) => {
     if (!pathname.includes("login") && !pathname.includes("signup")) {
       getToken();
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <Wrapper>
@@ -75,6 +77,16 @@ const Layout = (props: ILayout) => {
         ) : (
           <Content className="full">{children}</Content>
         )}
+
+        <SnackbarProvider
+          anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+          // style={{
+          //   height: 52,
+          //   backgroundColor: Colors.Green,
+          //   color: Colors.W100,
+          //   boxShadow: `${Metrics.Shadow_Flat} ${Colors.B05}`,
+          // }}
+        />
       </Container>
     </Wrapper>
   );

@@ -28,6 +28,7 @@ const Styles = {
     padding: 16px 20px 0;
     background: ${Colors.G1};
     border-radius: 8px;
+    width: 100%;
   `,
   DetailTitle: () => styled(Fonts.h5())`
     position: relative;
@@ -39,7 +40,7 @@ const Styles = {
       width: 4px;
       height: 100%;
       border-radius: 8px;
-      background: ${Colors.Green}
+      background: ${Colors.Green};
     }
   `,
   EditContent: () => styled.form`

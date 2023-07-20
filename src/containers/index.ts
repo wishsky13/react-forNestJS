@@ -3,7 +3,7 @@ import SignUp from "./signup";
 import Dashboard from "./dashboard";
 
 import AdminDashBoard from "./admin/dashboard";
-import AdminMember from "./admin/member";
+import Member from "./member";
 
 import EmployeeDashBoard from "./employee/dashboard";
 
@@ -12,6 +12,6 @@ export {
   SignUp,
   Dashboard,
   AdminDashBoard,
-  AdminMember,
+  Member,
   EmployeeDashBoard,
 };

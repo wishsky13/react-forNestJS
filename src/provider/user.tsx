@@ -33,11 +33,14 @@ const UserProvider = (props: any) => {
     if (cookies.get("token")) {
       setToken(cookies.get("token"));
       getUserData(cookies.get("token"));
+    }else{
+      setToken(undefined);
+      redirectToLogin();
     }
   };
 
   const getUserData = (token?: string) => {
-    ApiWithAuth(token ?? "")
+    ApiWithAuth(token ?? "0")
       .getUserData()
       .then((res: any) => {
         switch (res.status) {
